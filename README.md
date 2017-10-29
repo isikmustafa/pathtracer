@@ -1,5 +1,5 @@
 # pathtracer
-[raytracer.mustafaisik.net](raytracer.mustafaisik.net)
+[raytracer.mustafaisik.net](http://raytracer.mustafaisik.net)
 
 Some features of my path tracer:
  - Progressive path tracing
