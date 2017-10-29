@@ -6,6 +6,8 @@ Some features of my path tracer:
  - Cosine weighted importance sampling
  - Explicit light sampling
  - Perlin and image textures
+ - Subsurface scattering
+ - Depth of field
  
 Supported material types:
  - Lambertian Material
