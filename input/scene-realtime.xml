@@ -1,0 +1,92 @@
+<Scene>
+	<CameraSpeed>1</CameraSpeed>
+	<ImageName>buddha.png</ImageName>
+	<ImageResolution>800 800</ImageResolution>
+    <BackgroundColor>0 0 0</BackgroundColor>
+    <ShadowRayEpsilon>1e-4</ShadowRayEpsilon>
+	
+    <Camera>
+        <Position>0 1 0.99</Position>
+        <Gaze>0 0 -1</Gaze>
+        <Up>0 1 0</Up>
+        <NearPlane>-1 1 -1 1</NearPlane>
+        <NearDistance>1</NearDistance>
+    </Camera>
+	
+    <Lights>
+        <RectangleLight id="1">
+            <Position>-0.3 1.95 -0.8</Position>
+            <Edge1>0.6 0 0</Edge1>
+            <Edge2>0 0 0.6</Edge2>
+            <Radiance>2500 2500 2500</Radiance>
+        </RectangleLight>
+    </Lights>
+	
+    <Materials>
+        <Material id="0" type="Lambertian">
+            <DiffuseReflectance>1.0 1.0 1.0</DiffuseReflectance>
+        </Material>
+        <Material id="1" type="Lambertian">
+            <DiffuseReflectance>0.75 0.75 0.75</DiffuseReflectance>
+        </Material>
+        <Material id="2" type="Lambertian">
+            <DiffuseReflectance>1 0 0</DiffuseReflectance>
+        </Material>
+        <Material id="3" type="Lambertian">
+            <DiffuseReflectance>0 0 1</DiffuseReflectance>
+        </Material>
+        <Material id="4" type="PerfectRefractive">
+            <Tint>0.90 0.90 0.90</Tint>
+			<TintDistance>0.5</TintDistance>
+			<IOR>1.8</IOR>
+        </Material>
+        <Material id="5" type="PerfectSpecular">
+            <SpecularReflectance>1 1 1</SpecularReflectance>
+        </Material>
+    </Materials>
+	
+    <Objects>
+        <Mesh id="0">
+            <Data>input/cornellbox/left.obj</Data>
+            <Material>2</Material>
+        </Mesh>
+        <Mesh id="1">
+            <Data>input/cornellbox/right.obj</Data>
+            <Material>3</Material>
+        </Mesh>
+        <Mesh id="2">
+            <Data>input/cornellbox/floor.obj</Data>
+            <Material>1</Material>
+        </Mesh>
+        <Mesh id="3">
+            <Data>input/cornellbox/ceil.obj</Data>
+            <Material>1</Material>
+        </Mesh>
+        <Mesh id="4">
+            <Data>input/cornellbox/back.obj</Data>
+            <Material>1</Material>
+        </Mesh>
+        <Mesh id="5">
+            <Data>input/cornellbox/back.obj</Data>
+			<Transformation>
+				<Rotation>0 1 0 180</Rotation>
+				<Translation>0 0 -0.05</Translation>
+			</Transformation>
+            <Material>1</Material>
+        </Mesh>
+        <Sphere>
+			<Transformation>
+				<Scaling>0.3 0.3 0.3</Scaling>
+				<Translation>-0.5 0.3 0</Translation>
+			</Transformation>
+            <Material>4</Material>
+        </Sphere>
+        <Sphere>
+			<Transformation>
+				<Scaling>0.3 0.3 0.3</Scaling>
+				<Translation>0.53 0.3 -0.5</Translation>
+			</Transformation>
+            <Material>5</Material>
+        </Sphere>
+    </Objects>
+</Scene>
